@@ -1,0 +1,38 @@
+.contact {
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .04);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.contact:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .06);
+}
+
+.contact p {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #17b62c;
+    color: #fff;
+    transition: background-color .2s ease;
+}
+
+.contact button:hover {
+    background: #054b02;
+}
