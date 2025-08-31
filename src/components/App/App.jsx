@@ -10,24 +10,24 @@ import ContactList from '../ContactList/ContactList';
 import css from './App.module.css';
 
 export default function App() {
-  const dispatch = useDispatch();
-  const loading = useSelector(selectLoading);
-  const error = useSelector(selectError);
+    const dispatch = useDispatch();
+    const loading = useSelector(selectLoading);
+    const error = useSelector(selectError);
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+    useEffect(() => {
+        dispatch(fetchContacts());
+    }, [dispatch]);
 
-  return (
-    <div className={css.container}>
-      <h1>PhoneBook</h1>
-      <ContactForm />
-      <SearchBox />
+    return (
+        <div className={css.container}>
+            <h1>PhoneBook</h1>
+            <ContactForm />
+            <SearchBox />
 
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'crimson' }}>Error: {error}</p>}
+            {loading && <p>Loading...</p>}
+            {error && <p style={{ color: 'crimson' }}>Error: {error}</p>}
 
-      <ContactList />
-    </div>
-  );
+            <ContactList />
+        </div>
+    );
 }
