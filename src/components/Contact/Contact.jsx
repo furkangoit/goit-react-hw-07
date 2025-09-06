@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../Redux/contactsOps';
-import styles from './Contact.module.css';
 
 export default function Contact({ contact }) {
     const dispatch = useDispatch();
@@ -10,17 +9,36 @@ export default function Contact({ contact }) {
     };
 
     return (
-        <div className={styles.contact}>
-            <div className={styles.info}>
-                <span className={styles.name}>👤 {contact.name}</span>
-                <span className={styles.number}>📞 {contact.number}</span>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '15px',
+            border: '1px solid #ddd',
+            borderRadius: '8px',
+            marginBottom: '10px',
+            backgroundColor: '#f9f9f9'
+        }}>
+            <div>
+                <div style={{ fontWeight: '500', marginBottom: '5px' }}>
+                    👤 {contact.name}
+                </div>
+                <div style={{ color: '#666' }}>
+                    📞 {contact.number}
+                </div>
             </div>
             <button
-                type="button"
                 onClick={handleDelete}
-                className={styles.deleteBtn}
+                style={{
+                    backgroundColor: '#dc3545',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                }}
             >
-                Delete
+                Sil
             </button>
         </div>
     );
